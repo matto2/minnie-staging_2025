@@ -17,7 +17,7 @@ body {
 
   body {
     font-family: 'Nunito Variable', sans-serif;
-    color: #555555;
+    color: #57534E;
 }
 
 p a {
@@ -29,5 +29,5 @@ p a {
     --brand-secondary: #B91C1C;
     --brand-accent: #0090a7;
     --brand-accent2: #006480;
-    --text-color: #111827;
+    --text-color: #57534E;
 }

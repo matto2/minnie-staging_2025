@@ -5,9 +5,10 @@ import minnie from "../assets/minnie-cropped.jpg";
 import { Icon } from "astro-icon/components";
 import Song from "../components/Song.astro";
 import SongNoListen from "../components/SongNoListen.astro";
+const pageTitle = "The Songs";
 ---
 
-<Layout title="Songs">
+<Layout title={pageTitle}>
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:mt-0">
     <div class="lg:col-span-7">
       <h1 class="text-xl lg:text-3xl font-bold mb-4">Listen to the Songs 🎵</h1>

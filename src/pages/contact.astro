@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import minnie from "../assets/minnie-cropped.jpg";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Contact";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title={pageTitle}>
+  <!-- <h1>{pageTitle}</h1> -->
+  <Contact />
+</Layout>

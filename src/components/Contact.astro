@@ -1,0 +1,56 @@
+<div class="p-6 max-w-3xl mx-auto text-stone-600">
+  <h3 class="text-3xl font-bold mb-4">Questions or comments?</h3>
+  <p class="text-xl mb-6">
+    Use the form below or send a regular
+    <a
+      href="mailto:mattosurf@gmail.com?subject=minnie%20music"
+      class="text-brand-primary underline">email</a
+    >.
+  </p>
+
+  <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+    <div class="flex flex-col">
+      <label for="name" class="mb-1 text-sm font-medium text-stone-600"
+        >Name</label
+      >
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="email" class="mb-1 text-sm font-medium text-stone-600"
+        >Email</label
+      >
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="message" class="mb-1 text-sm font-medium text-stone-600"
+        >Message</label
+      >
+      <textarea
+        id="message"
+        name="message"
+        class="border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      ></textarea>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        class="bg-brand-primary text-white px-12 py-2 rounded-full w-full sm:w-auto hover:bg-brand-secondary focus:ring-2 focus:ring-brand-secondary focus:outline-none"
+      >
+        Send
+      </button>
+    </div>
+  </form>
+</div>
