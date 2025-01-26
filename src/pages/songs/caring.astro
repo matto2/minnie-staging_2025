@@ -1,0 +1,89 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Caring">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div
+      class="text-4xl lg:text-5xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6"
+    >
+      <!-- Caring text container -->
+      <div class="flex items-center justify-center lg:justify-start">
+        <a href="/songs/caring" class="block">Caring</a>
+      </div>
+
+      <!-- Buttons container -->
+      <div class="flex justify-center lg:justify-end items-center gap-4">
+        <audio controls="">
+          <source src="../src/assets/music/caring.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-12 italic">
+      We benefit from both giving and receiving.
+    </p>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        <p>Sometimes it's time for me to care for you,</p>
+        <p>Sometimes it's time for me to care for me.</p>
+        <p>Sometimes it's time to sit right back and</p>
+        <p>Let you come and care for me too.</p>
+      </div>
+
+      <p>
+        Caring by noticing you just came in the door,<br />
+        Noticing your jacket's new, or how your knee is sore;<br />
+        Caring by telling me my batting's looking good,<br />
+        Telling how you're feeling proud 'cause I did what I should.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p>
+        Caring when you clap your hands or pat me on the back,<br />
+        It says you like my pitching or you think I'm right on track;<br />
+        Caring by helping when I need to clean my room,<br />
+        Helping when I need to write a paper on the moon.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p>
+        Caring by sharing all our secret plans and schemes,<br />
+        Sharing all our troubles, and our stories and our dreams,<br />
+        Caring by listening to what I have to say,<br />
+        Where I want to go to, or what I want to play.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p>
+        Caring by recalling what we planned to do today,<br />
+        Remembering the promises I made you yesterday.<br />
+        Caring comes in many ways, if you'll just look around;<br />
+        Look at me, and look at you, it's easy to be found.
+      </p>
+
+      <div class="font-bold mt-6">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import minnie from "../assets/minnie-cropped.jpg";
+import { Icon } from "astro-icon/components";
+import Song from "../components/Song.astro";
+import SongNoListen from "../components/SongNoListen.astro";
+---
+
+<Layout title="Songs">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:mt-0">
+    <div class="lg:col-span-7">
+      <h1 class="text-xl lg:text-3xl font-bold mb-4">Listen to the Songs 🎵</h1>
+      <p class="text-lg lg:text-xl mb-4">
+        The following audio tracks were recorded around 1980, featuring Minnie
+        on piano, her daughter Jenny on vocals, and her sister Cookie on guitar
+        and vocals.
+      </p>
+
+      <p class="text-lg lg:text-xl">
+        Sheet music is available as printable PDFs, including standard piano,
+        vocal, and chord notation <a href="/preview" class="text-brand-accent"
+          >(preview here)</a
+        >. Each song also comes with a separate lyrics-only page for easy
+        reference.
+      </p>
+    </div>
+    <div
+      class="bg-orange-100 rounded-2xl lg:p-8 p-4 col-span-1 lg:col-span-5 w-full sm:col-span-5"
+    >
+      <ul class="text-lg font-bold sm:text-xl">
+        <li class="mb-4">Sheet music for single song: $4 each</li>
+        <a
+          href="https://buy.stripe.com/7sIeXI14W1k9cXm28q"
+          class="text-brand-accent hover:underline hover:text-brand-accent-2"
+        >
+          <li class="mb-4">Complete songbook (9 songs): $10</li>
+        </a>
+      </ul>
+      <p class="text-lg sm:text-xl">
+        Downloads are available immediately after purchase:
+      </p>
+    </div>
+    <!-- <p class="text-lg sm:text-xl">
+      We hope you enjoy these songs and find them easy to use and share!
+    </p> -->
+  </div>
+
+  <Song
+    songName="Caring"
+    listenLink="/songs/caring"
+    buyLink="https://buy.stripe.com/3cs9DofZQ7Ix8H6288"
+  />
+  <Song
+    songName="Come Along"
+    listenLink="/songs/come-along"
+    buyLink="https://buy.stripe.com/7sIaHs3d42od9La5kl"
+  />
+  <Song
+    songName="I Want To Be The Best I Can Be"
+    listenLink="/songs/i-want-to-be-the-best-i-can-be"
+    buyLink="https://buy.stripe.com/28obLw4h8e6V9La9AC"
+  />
+  <Song
+    songName="Listening"
+    listenLink="/songs/listening"
+    buyLink="https://buy.stripe.com/aEUaHsfZQd2Rg9y3cf"
+  />
+  <Song
+    songName="Most Valuable Player"
+    listenLink="/songs/most-valuable-player"
+    buyLink="https://buy.stripe.com/5kA5n8dRI2ode1qfZ2"
+  />
+  <Song
+    songName="Put Down Blues"
+    listenLink="/songs/put-down-blues"
+    buyLink="https://buy.stripe.com/7sIeXIfZQ2od1eEeUZ"
+  />
+  <Song
+    songName="Shine Like a Star"
+    listenLink="/songs/shine-like-a-star"
+    buyLink="https://buy.stripe.com/00g02O8xoaUJ0aA7sy"
+  />
+  <Song
+    songName="The Nicest Person"
+    listenLink="/songs/the-nicest-person"
+    buyLink="https://buy.stripe.com/fZe8zk8xo1k9bTiaEL"
+  />
+  <Song
+    songName="Treasure Chests"
+    listenLink="/songs/treasure-chests"
+    buyLink="https://buy.stripe.com/3cseXIaFwgf3g9y7sA"
+  />
+  <SongNoListen
+    songName="Complete Song Book"
+    buyLink="https://buy.stripe.com/7sIeXI14W1k9cXm28q"
+  />
+</Layout>

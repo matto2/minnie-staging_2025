@@ -1,0 +1,23 @@
+---
+const { songName, buyLink } = Astro.props;
+---
+
+<div
+  class="text-2xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6 bg-orange-100 rounded-2xl p-6"
+>
+  <!-- Caring text container -->
+  <div class="flex items-center justify-center lg:justify-start">
+    {songName}
+  </div>
+
+  <!-- Buttons container -->
+  <div class="flex justify-center lg:justify-end items-center gap-4">
+    <a href={buyLink}>
+      <div
+        class="bg-brand-accent hover:bg-brand-accent2 rounded-full py-4 text-white text-xl px-8 cursor-pointer"
+      >
+        Buy Sheet Music
+      </div>
+    </a>
+  </div>
+</div>

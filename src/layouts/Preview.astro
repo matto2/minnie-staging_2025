@@ -1,8 +1,7 @@
 ---
 import "../styles/main.css";
 import "@fontsource-variable/nunito";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -15,21 +14,19 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="bg-amber-50">
+  <body class="bg-amber-50 min-h-screen grid grid-rows-layout">
     <!-- Header -->
-    <Header />
     <!-- Main Content -->
-    <main class="p-4 max-w-6xl mx-auto w-full">
+    <main class="p-4 max-w-4xl mx-auto w-full">
       <h2></h2>
       <slot />
     </main>
     <!-- Footer -->
-    <Footer />
     <script src="/src/scripts/fslightbox.js"></script>
   </body>
 </html>
 
-<!-- <style>
+<style>
   html,
   body {
     margin: 0;
@@ -41,4 +38,4 @@ const { pageTitle } = Astro.props;
     display: grid;
     grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
   }
-</style> -->
+</style>

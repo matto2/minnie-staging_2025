@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import minnie from "../assets/minnie-cropped.jpg";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Home";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={pageTitle}>
+  <!-- <h1>{pageTitle}</h1> -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:mt-6">
+    <!-- Text Section -->
+    <div class="lg:col-span-7">
+      <p class="text-lg sm:text-2xl">
+        Welcome! <strong>Come Along Songs</strong> is a collection of songs composed
+        by Minnie O’Leary to encourage confidence, inclusion, and joy in all children.
+        This site intends to keep these joyful songs alive for parents and teachers
+        to share with current and future generations. Come Along Songs were originally
+        published in 1981 as Songs of Self Esteem&#8212;a collaboration with Earl
+        White, MFT. Earl asked Minnie to compose songs for the concepts in his books
+        after attending one of Minnie’s school musicals and witnessing the ‘beautiful
+        combination of enthusiastic student participation and positive self esteem
+        experiences’.
+      </p>
+    </div>
+    <!-- Image Section -->
+    <div class="lg:col-span-5 order-first lg:order-last">
+      <Image src={minnie} alt="Minnie" class="h-auto rounded-2xl" />
+    </div>
+  </div>
+  <div class="bg-orange-100 rounded-2xl p-8 grid grid-cols-12 gap-4 mt-8">
+    <div class="col-span-2">
+      <Icon
+        name="quotes"
+        class="text-4xl lg:text-6xl text-brand-primary sm:mx-8"
+      />
+    </div>
+    <div class="col-span-10 sm:mr-10">
+      <p class="text-lg sm:text-xl">
+        <em>
+          Come Along Songs were written to be sung and remembered by young
+          children, so the melodies are simple and the choruses short and
+          repetitive. Almost all the tunes are based on the pentatonic scale,
+          which is characteristic of both ancient folk songs and the natural
+          chant of children. (The five tones of the scale correspond to the
+          black keys on the piano.)
+        </em>
+      </p>
+
+      <p class="text-lg sm:text-xl mt-6">
+        <em>
+          These songs were also written to be clapped to, danced to, and moved
+          to in a variety of ways. They can be shared by groups of children in a
+          school or day care center and, like folk songs of old, they can be
+          sung as part of family activities each day. The songs are yours to
+          improvise and adapt: play them on the guitar or autoharp, change the
+          words, change the keys, add verses, or make up motions. Mostly, just
+          join hands with a child and <strong>SING!</strong>
+        </em>
+      </p>
+
+      <p class="text-lg sm:text-xl mt-6">
+        <strong>— Minnie O’Leary</strong>
+      </p>
+    </div>
+  </div>
 </Layout>

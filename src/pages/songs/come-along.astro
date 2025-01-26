@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Come Along">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div
+      class="text-4xl lg:text-5xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6"
+    >
+      <!-- Caring text container -->
+      <div class="flex items-center justify-center lg:justify-start">
+        <a href="/songs/caring" class="block">Come Along</a>
+      </div>
+
+      <!-- Buttons container -->
+      <div class="flex justify-center lg:justify-end items-center gap-4">
+        <audio controls="">
+          <source src="../src/assets/music/come-along.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-12 italic">
+      Each of us is important to the rest of us.
+    </p>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        Long ago there was a time when I felt all alone,<br />
+        Nobody would talk as I stood out there on my own;<br />
+        Wandering around the edge of every single game<br />
+        'til that magic moment when I heard them call my name.
+      </p>
+
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        Come along, you belong,<br />
+        Come along, like a song,<br />
+        And when you come along<br />
+        We are strong.
+
+        <p class="mt-4">
+          And we need you to come<br />
+          Like the earth needs the sun,<br />
+          Come along, you belong;<br />
+          We are one.<br />
+        </p>
+      </div>
+
+      <p>
+        Now I know that when I speak there's someone there to hear.<br />
+        There's someone there to help me when I struggle with my fear.<br />
+        I always have to do my part; it's waiting there for me,<br />
+        And if I start to wander off, I hear this melody<br />
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p>
+        If you ever feel alone, just like I used to do,<br />
+        Start to look around you cause we're lookin' out for you.<br />
+        If you're small, we'll guide you;<br />
+        If you're hurt, we'll help you out,<br />
+        An arm around your shoulder,<br />
+        And that old familiar shout:<br />
+      </p>
+
+      <div class="font-bold mt-6">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+    </div>
+  </div>
+</Layout>

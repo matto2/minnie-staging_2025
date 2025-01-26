@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Preview.astro";
+import { Image } from "astro:assets";
+import preview from "../assets/preview.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Preview">
+  <div class="grid grid-cols-2">
+    <div>
+      <h1 class="text-xl lg:text-3xl font-bold mb-4">Sheet Music Preview</h1>
+    </div>
+    <div>
+      <a href="/songs">
+        <div class="flex justify-end">
+          <Icon name="close" class="text-3xl mr-2" />
+          <p class="text-lg font-bold pt-1">Close Preview</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <Image
+    src={preview}
+    alt="Sheet music Preview"
+    class="h-auto rounded-2xl mx-auto"
+  />
+</Layout>
