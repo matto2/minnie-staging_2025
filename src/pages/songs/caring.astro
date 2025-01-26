@@ -1,9 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+const pageTitle = "Caring";
 ---
 
-<Layout title="Caring">
+<Layout title={pageTitle}>
   <div class="max-w-3xl mx-auto">
     <div class="flex items-center gap-2 text-lg">
       <a href="/songs">
@@ -17,13 +18,13 @@ import { Icon } from "astro-icon/components";
     >
       <!-- Caring text container -->
       <div class="flex items-center justify-center lg:justify-start">
-        <a href="/songs/caring" class="block">Caring</a>
+        <a href="/songs/caring" class="block">{pageTitle}</a>
       </div>
 
       <!-- Buttons container -->
       <div class="flex justify-center lg:justify-end items-center gap-4">
         <audio controls="">
-          <source src="../src/assets/music/caring.mp3" type="audio/mpeg" />
+          <source src="/audio/caring.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </div>
