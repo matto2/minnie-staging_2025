@@ -4,23 +4,19 @@ const navItems = [
   { name: "The Songs", href: "/songs" },
   { name: "Contact", href: "/contact" },
 ];
-
-// Get the current pathname
-const currentPath = Astro.url.pathname;
 ---
 
 <nav class="bg-transparent">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Container for the navigation -->
     <div class="h-12">
-      <!-- Navigation items aligned to the left -->
       <div class="flex items-center space-x-8">
         {
           navItems.map((item) => (
             <a
               href={item.href}
               class={`relative inline-block px-1 pt-1 text-xl sm:text-2xl font-medium ${
-                currentPath === item.href
+                typeof window !== "undefined" &&
+                window.location.pathname === item.href
                   ? "text-stone-600 font-bold before:content-[''] before:absolute before:w-full before:h-1 before:bg-stone-600 before:bottom-0 before:left-0 before:translate-y-2 sm:before:translate-y-0"
                   : "text-brand-primary hover:text-brand-secondary"
               }`}
