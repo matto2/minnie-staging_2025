@@ -9,32 +9,26 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-2">
-    <div class="flex justify-between h-12">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <!-- Optional: Add a logo here -->
-        </div>
-        <div class="sm:ml-6 sm:flex space-x-8">
-          {
-            navItems.map((item) => {
-              const isActive = currentPath === item.href; // Check if the item is active
-              return (
-                <a
-                  href={item.href}
-                  class={`relative inline-flex items-center px-1 pt-1 text-xl sm:text-2xl font-medium ${
-                    isActive
-                      ? "text-stone-600 font-bold before:content-[''] before:absolute before:w-full before:h-1 before:bg-stone-600 before:bottom-0 before:left-0 before:translate-y-2 sm:before:translate-y-0"
-                      : "text-brand-primary hover:text-brand-secondary"
-                  }`}
-                >
-                  {item.name}
-                </a>
-              );
-            })
-          }
-        </div>
+<nav class="bg-transparent">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Container for the navigation -->
+    <div class="h-12">
+      <!-- Navigation items aligned to the left -->
+      <div class="flex items-center space-x-8">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class={`relative inline-block px-1 pt-1 text-xl sm:text-2xl font-medium ${
+                currentPath === item.href
+                  ? "text-stone-600 font-bold before:content-[''] before:absolute before:w-full before:h-1 before:bg-stone-600 before:bottom-0 before:left-0 before:translate-y-2 sm:before:translate-y-0"
+                  : "text-brand-primary hover:text-brand-secondary"
+              }`}
+            >
+              {item.name}
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
