@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "I Want To Be The Best I Can Be";
+const lesson =
+  "We grow towards our potential through both individual and group effort.";
+const audioLink = "../audio/i-want-to-be-the-best-i-can-be.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        I kicked a can along the street, and then a soccer ball<br />
+        I'd rather kick that soccer ball than eat or go to school.<br />
+        Someday I will be—on "All Star Soccer" on TV<br />
+        My team will be up for the World Cup.
+      </p>
+
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        I want to be the best I can be,<br />
+        I want to do all I can;<br />
+        I want to be the best I can be,<br />
+        I want to be who I am.
+      </div>
+
+      <p class="mb-4">
+        I used to jump upon the bed and stand on my head.<br />
+        Now there are mats and there are bars, routines on the balance beam.<br
+        />
+        I’ll work 'til I claim a place in the Olympic Games<br />
+        The medal I will hold will be gold.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        I used to run among the hills alone, chasing butterflies.<br />
+        Now they all say that I should run a race and win a prize.<br />
+        All I’d like to do would be run the hills my whole life through;<br />
+        No one there but me.<br />
+        I’d be free.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        We like to jump and climb and stroll, and roll and kick a goal;<br />
+        We like to reach and bend and run, and feel the morning sun.<br />
+        When we're on a team<br />
+        We're a lot more than we seem.<br />
+        When we play, we give and we live.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p>
+        We want to be the best we can be;<br />
+        Our dreaming will take us far.<br />
+        We want to be the best we can be,<br />
+        We want to be who we are.
+      </p>
+    </div>
+  </div>
+</Layout>

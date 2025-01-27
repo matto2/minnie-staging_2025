@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Treasure Chests";
+const lesson = "We become enriched through sharing our heritage.";
+const audioLink = "../audio/treasure-chests.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        Some of us come from a distant land,<br />
+        Some of us from nearby;<br />
+        But all of us carry a treasure chest<br />
+        With things that gold can't buy,<br />
+        With things that gold can't buy.
+      </p>
+
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        And when we share our treasure chests,<br />
+        We all grow rich, you see,<br />
+        The riches in that treasure chest<br />
+        Are what makes you and me,<br />
+        Are what makes you and me.
+      </div>
+
+      <p class="mb-4">
+        Treasures come from years ago,<br />
+        From countries far away,<br />
+        Treasures come from our families,<br />
+        Last year or yesterday,<br />
+        Last year or yesterday.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        Holidays, games and stories,<br />
+        Languages and songs<br />
+        Faith and courage and wisdom,<br />
+        And ways to get along, and<br />
+        Ways to get along.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+    </div>
+  </div>
+</Layout>

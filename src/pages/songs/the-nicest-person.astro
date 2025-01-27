@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "The Nicest Person";
+const lesson =
+  "We can recognize and appreciate the likable characteristics and potential in others and in ourselves.";
+const audioLink = "../audio/the-nicest-person.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        The nicest person in the whole wide world<br />
+        Is <span class="font-bold italic">brave</span> and <span
+          class="font-bold italic">gentle</span
+        >.
+      </p>
+
+      <p class="mb-4">
+        I see someone near me who is<br />
+        <span class="font-bold italic">brave</span> and <span
+          class="font-bold italic">gentle</span
+        >.
+      </p>
+
+      <p class="mb-4">
+        And I have a feeling, if I give it time<br />
+        and search inside, I will find that<br />
+        I can be <span class="font-bold italic">brave</span> and <span
+          class="font-bold italic">gentle</span
+        > too.
+      </p>
+
+      <p class="mb-4">
+        The nicest person in the whole wide world<br />
+        Is <span class="font-bold italic">helpful</span> and <span
+          class="font-bold italic">loyal</span
+        >.
+      </p>
+
+      <p class="mb-4">
+        I see someone near me who is<br />
+        <span class="font-bold italic">helpful</span> and <span
+          class="font-bold italic">loyal</span
+        >.
+      </p>
+
+      <p class="mb-4">
+        And I have a feeling, if I give it time<br />
+        and search inside, I will find that<br />
+        I can be <span class="font-bold italic">helpful</span> and <span
+          class="font-bold italic">loyal</span
+        > too.
+      </p>
+
+      <p class="mb-4">
+        The nicest person in the whole wide world<br />
+        Is <span class="font-bold italic">fun</span> and <span
+          class="font-bold italic">honest</span
+        >.
+      </p>
+
+      <p class="mb-4">
+        I see someone near me who is<br />
+        <span class="font-bold italic">fun</span> and <span
+          class="font-bold italic">honest</span
+        >.
+      </p>
+
+      <p>
+        And I have a feeling, if I give it time<br />
+        and search inside, I will find that<br />
+        I can be <span class="font-bold italic">fun</span> and <span
+          class="font-bold italic">honest</span
+        > too.
+      </p>
+
+      <p class="text-sm mt-6">
+        <em
+          >*Any word describing a positive characteristic may be used in place
+          of the <span class="font-bold">bold</span> words.</em
+        >
+      </p>
+    </div>
+  </div>
+</Layout>

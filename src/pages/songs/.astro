@@ -15,25 +15,25 @@ const audioLink = "../audio/come-along.mp3";
       <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
     </div>
 
-    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+    <div
+      class="text-4xl lg:text-5xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6"
+    >
       <!-- Caring text container -->
-      <div class="">
+      <div class="flex items-center justify-center lg:justify-start">
         {pageTitle}
       </div>
+
+      <!-- Buttons container -->
+      <div class="flex justify-center lg:justify-end items-center gap-4">
+        <audio controls="">
+          <source src={audioLink} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </div>
-    <p class="text-base lg:text-lg mb-6 italic">
+    <p class="text-base lg:text-lg mb-12 italic">
       {lesson}
     </p>
-    <!-- Buttons container -->
-    <div class="mb-6">
-      <audio
-        controls
-        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
-      >
-        <source src={audioLink} type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
 
     <div class="text-lg lg:text-xl leading-relaxed">
       <p class="mb-4">

@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 const pageTitle = "Caring";
+const lesson = "We benefit from both giving and receiving.";
+const audioLink = "../audio/caring.mp3";
 ---
 
 <Layout title={pageTitle}>
@@ -13,25 +15,25 @@ const pageTitle = "Caring";
       <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
     </div>
 
-    <div
-      class="text-4xl lg:text-5xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6"
-    >
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
       <!-- Caring text container -->
-      <div class="flex items-center justify-center lg:justify-start">
-        <a href="/songs/caring" class="block">{pageTitle}</a>
-      </div>
-
-      <!-- Buttons container -->
-      <div class="flex justify-center lg:justify-end items-center gap-4">
-        <audio controls="">
-          <source src="/audio/caring.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+      <div class="">
+        {pageTitle}
       </div>
     </div>
-    <p class="text-base lg:text-lg mb-12 italic">
-      We benefit from both giving and receiving.
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
     </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
     <div class="text-lg lg:text-xl leading-relaxed">
       <div class="font-bold mb-4">

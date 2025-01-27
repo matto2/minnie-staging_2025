@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Most Valuable Player";
+const lesson = "We can be considerate (patient) competitors.";
+const audioLink = "../audio/most-valuable-player.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        I know a kid, used to play on my team. Most<br />
+        Valuable player I know.<br />
+        That player wasn't the best at the game. But to<br />
+        Me that kid looked like a pro.
+      </p>
+
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        Played hard, played fair,<br />
+        Treated other kids with care. No<br />
+        Matter what the scoreboard said, that<br />
+        Kid came out a winner.<br />
+        Always won the game.
+      </div>
+
+      <p class="mb-4">
+        We had some games when nothing went right.<br />
+        We would be badly behind.<br />
+        That kid kept trying and never gave up<br />
+        'til we were all out of time.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        Some of us think that the referee hates us, so<br />
+        Once in a while why not cheat?<br />
+        That kid would always play by the rules<br />
+        Even though we might get beat.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        Some of us teammates would make a mistake, like<br />
+        Kicking a ball the wrong way;<br />
+        That kid would never give us a bad time, but<br />
+        Just say "good try"—"that's okay".
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        So any time that I play on a team<br />
+        I want that kid by my side. But<br />
+        I realize I can play that way too. It's<br />
+        Finally time that I tried.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        I’ll play hard.<br />
+        I’ll play fair.<br />
+        Treat the other kids with care. No<br />
+        Matter what the scoreboard says,<br />
+        I’ll come out a winner.<br />
+        Always win the game.
+      </div>
+    </div>
+  </div>
+</Layout>

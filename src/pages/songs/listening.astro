@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Listening";
+const lesson =
+  "We experience and show understanding, awareness, and caring through listening.";
+const audioLink = "../audio/listening.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        I like it when you listen with your ears,<br />
+        and with your eyes.<br />
+        I like it when you listen with your heart.
+      </div>
+
+      <p class="mb-4">
+        Sometimes there are such special things<br />
+        I think that you should hear,<br />
+        I like to think you're tuning in<br />
+        So everything is clear.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        I'm happy when you look at me<br />
+        As if you want to know,<br />
+        The feelings and the thoughts<br />
+        That are so very hard to show.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        And after I have told you<br />
+        What it is, the best I could,<br />
+        It means a lot for you to let<br />
+        Me know you've understood.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+    </div>
+  </div>
+</Layout>

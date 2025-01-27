@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Shine Like a Star";
+const lesson = "We are each both unique and connected.";
+const audioLink = "../audio/shine-like-a-star.mp3";
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-lg">
+      <a href="/songs">
+        <Icon name="arrow-left" class="w-6 h-6 text-brand-accent" />
+      </a>
+      <a href="/songs" class="text-brand-accent hover:underline">All songs</a>
+    </div>
+
+    <div class="text-4xl lg:text-5xl font-bold mt-6 mb-4">
+      <!-- Caring text container -->
+      <div class="">
+        {pageTitle}
+      </div>
+    </div>
+    <p class="text-base lg:text-lg mb-6 italic">
+      {lesson}
+    </p>
+    <!-- Buttons container -->
+    <div class="mb-6">
+      <audio
+        controls
+        class="outline outline-2 outline-offset-2 outline-brand-primary w-full rounded-full"
+      >
+        <source src={audioLink} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="text-lg lg:text-xl leading-relaxed">
+      <p class="mb-4">
+        When I look out in the night,<br />
+        I can see a million lights,<br />
+        I can see a million stars.
+      </p>
+
+      <p class="mb-4">
+        People like you and I.<br />
+        We sparkle like the sky,<br />
+        Just by being who we are.
+      </p>
+
+      <div class="font-bold mb-4">
+        <p class="text-brand-accent">Chorus</p>
+        Shine like the morning star,<br />
+        Spreading light from near to far;<br />
+        Feeling proud of who you are,<br />
+        Shine like a star.
+      </div>
+
+      <p class="mb-4">
+        Each star has its place to be<br />
+        Shining through eternity,<br />
+        Together they light up all the sky.<br />
+        Different as we all may be,<br />
+        This old world needs you and me,<br />
+        Needs the special light we have to share.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+
+      <p class="mb-4">
+        There is no one just like you,<br />
+        There is no one just like me;<br />
+        We are all one of a kind<br />
+        In this great big universe.<br />
+        There's a place for all of us,<br />
+        A place to grow; a place to dream.
+      </p>
+
+      <div class="font-bold mt-6 mb-4">
+        <p class="text-brand-accent">Chorus</p>
+      </div>
+    </div>
+  </div>
+</Layout>
