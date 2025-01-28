@@ -1,5 +1,11 @@
 ---
 const { pathname } = Astro.url;
+const isActive = (path: string) => {
+  if (path === "/") {
+    return pathname === "/" || pathname === "";
+  }
+  return pathname === path || pathname === path + "/";
+};
 ---
 
 <div class="max-w-6xl mx-auto">
@@ -7,8 +13,7 @@ const { pathname } = Astro.url;
     <a
       href="/"
       class:list={[
-        pathname === "/" &&
-          "text-black underline decoration-2 underline-offset-2",
+        isActive("/") && "text-black underline decoration-2 underline-offset-2",
       ]}
     >
       <div>Home</div>
@@ -16,7 +21,7 @@ const { pathname } = Astro.url;
     <a
       href="/songs"
       class:list={[
-        pathname === "/songs" &&
+        isActive("/songs") &&
           "text-black underline decoration-2 underline-offset-2",
       ]}
     >
@@ -25,7 +30,7 @@ const { pathname } = Astro.url;
     <a
       href="/contact"
       class:list={[
-        pathname === "/contact" &&
+        isActive("/contact") &&
           "text-black underline decoration-2 underline-offset-2",
       ]}
     >
