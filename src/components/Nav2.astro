@@ -1,12 +1,34 @@
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="grid grid-cols-3">
-    <a href="/">
+---
+const { pathname } = Astro.url;
+---
+
+<div class="max-w-6xl mx-auto">
+  <div class="flex text-2xl font-semibold text-brand-primary space-x-8">
+    <a
+      href="/"
+      class:list={[
+        pathname === "/" &&
+          "text-black underline decoration-2 underline-offset-2",
+      ]}
+    >
       <div>Home</div>
     </a>
-    <a href="/songs">
+    <a
+      href="/songs"
+      class:list={[
+        pathname === "/songs" &&
+          "text-black underline decoration-2 underline-offset-2",
+      ]}
+    >
       <div>The Songs</div>
     </a>
-    <a href="/contact">
+    <a
+      href="/contact"
+      class:list={[
+        pathname === "/contact" &&
+          "text-black underline decoration-2 underline-offset-2",
+      ]}
+    >
       <div>Contact</div>
     </a>
   </div>
