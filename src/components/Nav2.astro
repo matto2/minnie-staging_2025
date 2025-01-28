@@ -8,12 +8,13 @@ const isActive = (path: string) => {
 };
 ---
 
-<div class="max-w-6xl mx-auto">
+<div class="max-w-6xl mx-auto px-4">
   <div class="flex text-2xl font-semibold text-brand-primary space-x-8">
     <a
       href="/"
       class:list={[
-        isActive("/") && "text-black underline decoration-2 underline-offset-2",
+        isActive("/") &&
+          "text-stone-600 font-bold underline decoration-4 underline-offset-8",
       ]}
     >
       <div>Home</div>
@@ -22,7 +23,7 @@ const isActive = (path: string) => {
       href="/songs"
       class:list={[
         isActive("/songs") &&
-          "text-black underline decoration-2 underline-offset-2",
+          "text-stone-600 font-bold underline decoration-4 underline-offset-8",
       ]}
     >
       <div>The Songs</div>
@@ -31,7 +32,7 @@ const isActive = (path: string) => {
       href="/contact"
       class:list={[
         isActive("/contact") &&
-          "text-black underline decoration-2 underline-offset-2",
+          "text-stone-600 font-bold underline decoration-4 underline-offset-8",
       ]}
     >
       <div>Contact</div>
