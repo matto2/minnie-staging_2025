@@ -1,12 +1,6 @@
 ---
-export const prerender = false;
-
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "Purchase Complete";
-
-// Get session_id from URL parameters
-const url = new URL(Astro.request.url);
-const sessionId = url.searchParams.get('session_id');
 ---
 
 <Layout title={pageTitle}>
@@ -37,13 +31,11 @@ const sessionId = url.searchParams.get('session_id');
       </div>
     </div>
 
-    {sessionId && (
-      <div class="bg-gray-100 rounded-lg p-4 mb-8">
-        <p class="text-sm text-gray-600">
-          Order ID: <code class="bg-white px-2 py-1 rounded">{sessionId}</code>
-        </p>
-      </div>
-    )}
+    <div class="bg-gray-100 rounded-lg p-4 mb-8">
+      <p class="text-sm text-gray-600">
+        Order ID: <code class="bg-white px-2 py-1 rounded" id="session-id">Processing...</code>
+      </p>
+    </div>
 
     <div class="space-y-4">
       <p class="text-gray-600">
@@ -65,4 +57,17 @@ const sessionId = url.searchParams.get('session_id');
       </div>
     </div>
   </div>
+
+  <script>
+    // Get session_id from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id');
+    const sessionIdElement = document.getElementById('session-id');
+    
+    if (sessionId && sessionIdElement) {
+      sessionIdElement.textContent = sessionId;
+    } else if (sessionIdElement) {
+      sessionIdElement.textContent = 'Not available';
+    }
+  </script>
 </Layout>
