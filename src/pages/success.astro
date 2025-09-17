@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Purchase Complete";
+
+// Get session_id from URL parameters
+const url = new URL(Astro.request.url);
+const sessionId = url.searchParams.get('session_id');
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-2xl mx-auto text-center py-12">
+    <div class="bg-green-100 rounded-2xl p-8 mb-8">
+      <div class="text-6xl mb-4">✅</div>
+      <h1 class="text-3xl font-bold text-green-800 mb-4">Purchase Complete!</h1>
+      <p class="text-lg text-green-700">
+        Thank you for your purchase. Your download links are being prepared.
+      </p>
+    </div>
+
+    <div class="bg-orange-100 rounded-2xl p-6 mb-8">
+      <h2 class="text-xl font-bold mb-4">What happens next?</h2>
+      <div class="text-left space-y-3">
+        <div class="flex items-start space-x-3">
+          <span class="text-brand-accent font-bold">1.</span>
+          <p>We're processing your payment and preparing your downloads</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="text-brand-accent font-bold">2.</span>
+          <p>You'll receive an email with your download links within 5-10 minutes</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="text-brand-accent font-bold">3.</span>
+          <p>Download links are valid for 7 days with up to 5 downloads</p>
+        </div>
+      </div>
+    </div>
+
+    {sessionId && (
+      <div class="bg-gray-100 rounded-lg p-4 mb-8">
+        <p class="text-sm text-gray-600">
+          Order ID: <code class="bg-white px-2 py-1 rounded">{sessionId}</code>
+        </p>
+      </div>
+    )}
+
+    <div class="space-y-4">
+      <p class="text-gray-600">
+        Didn't receive your email? Check your spam folder or contact us.
+      </p>
+      <div class="space-x-4">
+        <a 
+          href="/songs" 
+          class="inline-block bg-brand-primary hover:bg-brand-secondary text-white px-6 py-3 rounded-full"
+        >
+          Back to Songs
+        </a>
+        <a 
+          href="/contact" 
+          class="inline-block bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
