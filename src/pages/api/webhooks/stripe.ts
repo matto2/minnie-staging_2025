@@ -3,6 +3,8 @@ import { stripe, WEBHOOK_SECRET } from '../../../lib/stripe';
 import { addPurchase } from '../../../lib/purchases';
 import crypto from 'crypto';
 
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
   const body = await request.text();
   const signature = request.headers.get('stripe-signature');

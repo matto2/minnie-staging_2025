@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { loadPurchases } from '../../../lib/purchases';
 
+export const prerender = false;
+
 export const GET: APIRoute = async ({ params }) => {
   const { sessionId } = params;
 

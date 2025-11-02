@@ -4,6 +4,8 @@ import { getProductFileName } from '../../../lib/downloads';
 import fs from 'fs';
 import path from 'path';
 
+export const prerender = false;
+
 export const GET: APIRoute = async ({ params }) => {
   const { token } = params;
 
