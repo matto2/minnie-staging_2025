@@ -1,11 +1,11 @@
 ---
-const { songName, listenLink, buyLink } = Astro.props;
+const { songName, listenLink, pdfLink } = Astro.props;
 ---
 
 <div
   class="text-2xl font-bold grid grid-cols-1 lg:grid-cols-2 gap-4 my-6 bg-orange-100 rounded-2xl sm:p-6 p-4"
 >
-  <!-- Caring text container -->
+  <!-- Song name container -->
   <div class="flex items-center justify-center lg:justify-start">
     <a href={listenLink} class="block hover:underline hover:text-brand-primary"
       >{songName}</a
@@ -21,11 +21,11 @@ const { songName, listenLink, buyLink } = Astro.props;
         Listen
       </div></a
     >
-    <a href={buyLink}>
+    <a href={pdfLink} target="_blank">
       <div
         class="bg-brand-accent hover:bg-brand-accent2 rounded-full py-4 text-white sm:text-xl sm:px-8 px-6 text-base cursor-pointer"
       >
-        Buy Sheet Music
+        Sheet Music
       </div>
     </a>
   </div>
