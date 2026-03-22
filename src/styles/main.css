@@ -1,3 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Nunito Variable', sans-serif;
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent2: var(--brand-accent2);
+  --color-brand-text: var(--text-color);
+}
 
 html,
 body {
